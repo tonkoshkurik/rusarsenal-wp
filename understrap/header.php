@@ -40,10 +40,10 @@
 
                         </div>
                         <div class="bascet">
-                            
-                            <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('WooCommerce Cart')) : ?>
-                                Please add woocommerce widget in this area. 
-                            <?php endif; ?>
+                            <a class="cart-contents" href="<?php echo WC()->cart->get_cart_url(); ?>" title="Перейти в корзину">
+                            <div class="total_products">
+                                
+                                <?php echo WC()->cart->get_cart_contents_count(); ?></div> </a>
                         </div>
                     </div>
                 </div>

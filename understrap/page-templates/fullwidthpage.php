@@ -56,7 +56,8 @@ get_header(); ?>
                                 ?></div>
                                 <div class="btn-position">
                                 <?php 
-                                    woocommerce_template_loop_add_to_cart( $loop->post, $product );
+                                    $home = esc_url( home_url( '/' ) ); 
+                                    echo "<a href='{$home}?add-to-cart={$loop->post->ID}'><i class='fa fa-shopping-cart'></i></a>";
                                 ?>
                                 </div>
                                 </div>
