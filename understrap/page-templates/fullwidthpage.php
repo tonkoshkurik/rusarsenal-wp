@@ -9,14 +9,13 @@
 
 get_header(); ?>
 
-<div class="wrapper row" id="full-width-page-wrapper">
+<div class="wrapper" id="full-width-page-wrapper">
     <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Top Sidebar')) : ?>
     <?php endif; ?>
     <div  id="content" class="container">
-        
 	   <div id="primary" class="col-md-12 content-area">
 
-            <main id="main" class="site-main" role="main">
+            <main id="main" class="site-main" >
                                                      
                     <?php
 
@@ -33,7 +32,6 @@ get_header(); ?>
                             'order'       =>  'DESC',
                             'meta_query'  =>  $meta_query
                         );
-
                         $loop = new WP_Query( $args );
                         while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
 
@@ -92,7 +90,7 @@ get_header(); ?>
                        //     echo '<li><a href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a> </li> ';
                         ?>
                   
-                            <article class="col-md-6 item item_num1 item__module  lastItem visible-first" id="item_10">
+                            <article class="col-md-6 item item_num1 item__module  lastItem visible-first" >
                             <div class="relative">
                             <figure class="item_img img-intro img-intro__none">
                             <time datetime="<?php echo $recent['post_date'] ?>" class="item_published">
@@ -112,9 +110,9 @@ get_header(); ?>
                             $content = implode(" ",array_splice($words,0,13)) . " ..." ;
                             echo $content;
                                 ?>
-                            <a class="readmore" href="<?php echo get_permalink($recent["ID"]); ?>"><span>Подробней</span></a></div>
+                            <a class="readmore" href="<?php echo get_permalink($recent["ID"]); ?>"><span>Читать</span></a></div>
                             <div class="clearfix"></div>
-                            </div> </article>
+                            </div></div>  </article>
                         <?php endforeach; ?> 
                             </div>
                         </div>

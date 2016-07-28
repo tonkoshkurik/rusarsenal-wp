@@ -11,7 +11,7 @@
 <?php // get_sidebar('footerfull'); ?>
 
 <div id="footer">
-    <dic class="container">
+    <div class="container">
         <div class="row">
             <div class="col-sm-3">
                 <?php wp_nav_menu(
@@ -19,7 +19,7 @@
                                         'theme_location' => 'footer-main-menu',
                                         'container_class' => FALSE,
                                         'fallback_cb' => '',
-                                        'menu_id' => 'footer-menu',
+                                        'menu_class' => 'footer-menu',
                                     )
                             ); ?>
             </div>
@@ -51,16 +51,17 @@
                 $parent_cat[]=$cat;
                 $index++;
                 }
-            } 
-            for($i = 0; $i <= $index/2; $i++){
-                echo '<br /><a href="'. get_term_link($parent_cat[$i]->slug, 'product_cat') .'">'. $parent_cat[$i]->name .'</a>';
             }
-        echo '</div><div class="col-sm-3">';
-            for($i = $index/2+1; $i < $index; $i++){
-                echo '<br /><a href="'. get_term_link($parent_cat[$i]->slug, 'product_cat') .'">'. $parent_cat[$i]->name .'</a>';
+            echo '<ul class="footer-categories footer-menu">';
+            for($i = 0; $i < $index/2; $i++){
+                echo '<li class="footer-cat"><a href="'. get_term_link($parent_cat[$i]->slug, 'product_cat') .'">'. $parent_cat[$i]->name .'</a></li>';
+            }
+        echo '</ul></div><div class="col-sm-3"><ul class="footer-categories footer-menu">';
+            for($i = $index/2; $i < $index; $i++){
+                echo '<li class="footer-cat"><a href="'. get_term_link($parent_cat[$i]->slug, 'product_cat') .'">'. $parent_cat[$i]->name .'</a></li>';
             }
 
-        echo '</div>'
+        echo '</ul></div>'
         ?>
         <div class="col-sm-3">
             <p>ООО «РУСАРСЕНАЛ-СПб» <br>
@@ -68,28 +69,30 @@
             Рябовское шоссе, д.124 </p>
 
             <p><a href="tel:88123134326">8 (812) 313-43-26</a><br>
-            <a href="tel:>89013018630">8 (901) 301-86-30 </a><br>
+            <a href="tel:89013018630">8 (901) 301-86-30 </a><br>
             <a href="mailto:info@rusarsenal-spb.com">info@rusarsenal-spb.com</a></p>
 
+            
+
+        </div>
+            
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3">
+            <a href="#" class="price-list">Прайс-лист</a>
+            <a href="#" class="btn btn-md podpis">Подписаться</a>
+          </div>
+          <div class="col-md-3">
             <p>Время работы офиса и склада: <br>
             понедельник-пятница <br>
             с 9:00 до 17:30, <br>
             обед с 12:30 до 13:00 </p>
+          </div>
         </div>
-            
-        </div>
-    </dic>
-</div>
-
-<div class="wrapper" id="wrapper-footer">
-    
-    <div class="container">
-
         <div class="row">
-
             <div class="col-md-12">
     
-                <footer id="colophon" class="site-footer" role="contentinfo">
+                <footer id="colophon" class="site-footer">
 
                     <div class="site-info">
                           ООО «РУСАРСЕНАЛ-СПб»
@@ -100,17 +103,14 @@
                 </footer><!-- #colophon -->
 
             </div><!--col end -->
+        </div>
+    </div>
+</div>
 
-        </div><!-- row end -->
-        
-    </div><!-- container end -->
-    
-</div><!-- wrapper end -->
 
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
 
 </body>
-
 </html>

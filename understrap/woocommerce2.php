@@ -12,10 +12,10 @@
 
 get_header(); ?>
 
-<div class="wrapper" id="woocommerce-wrapper">
+<div class="wrapper" id="woocommerce-wrapper row">
     
     <div class="container">
-        
+        <?php get_sidebar(); ?>
 	   <div id="primary" class="<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>col-md-8<?php else : ?>col-md-12<?php endif; ?> content-area">
 	   
             <main id="main" class="site-main" role="main">
@@ -27,7 +27,7 @@ get_header(); ?>
            
 	    </div><!-- #primary -->
         
-        <?php get_sidebar(); ?>
+        
         
     </div><!-- Container end -->
     

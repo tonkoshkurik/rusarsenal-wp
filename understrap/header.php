@@ -22,27 +22,31 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="hfeed site container-fluid">
-    <div class="row">
+<div id="page" class="hfeed site">
+<div class="container-fluid">
+<div class="row">
 <div id="home">
     <div class="wrapper-inner">
         <div id="top">
             <div class="container">
                 <div class="row">
                     <div class="logo col-md-3">
+                        <? if(is_front_page()){ ?>
+                        <img src="<?php echo get_template_directory_uri(); ?>/src/img/logo.png" alt="Logo">
+                        <?php } else { ?>
                         <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php echo get_template_directory_uri(); ?>/src/img/logo.png" alt="Logo"></a>
+                        <?php } ?>
                     </div>
                     <div class="col-md-9">
                         <div class="phone">
                               <p><a href="tel:88123134326">8 (812) 313-43-26</a><br>
-            <a href="tel:>89013018630">8 (901) 301-86-30 </a><br>
+            <a href="tel:89013018630">8 (901) 301-86-30 </a><br>
             <a href="mailto:info@rusarsenal-spb.com">info@rusarsenal-spb.com</a></p>
 
                         </div>
                         <div class="bascet">
                             <a class="cart-contents" href="<?php echo WC()->cart->get_cart_url(); ?>" title="Перейти в корзину">
                             <div class="total_products">
-                                
                                 <?php echo WC()->cart->get_cart_contents_count(); ?></div> </a>
                         </div>
                     </div>
@@ -96,5 +100,6 @@
     </div>
         
         
+</div>
 </div>
 </div>

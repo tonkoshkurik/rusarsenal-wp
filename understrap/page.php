@@ -17,8 +17,12 @@ get_header(); ?>
     <div  id="content" class="container">
 
         <div class="row">
+            <?php
+            if ( function_exists('yoast_breadcrumb') ) {
+                 yoast_breadcrumb('<p id="breadcrumbs">','</p>');
+            } ?>
         
-    	   <div id="primary" class="<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>col-md-8<?php else : ?>col-md-12<?php endif; ?> content-area">
+    	   <div id="primary" class="col-md-12 content-area">
            
                  <main id="main" class="site-main" role="main">
 
@@ -39,7 +43,7 @@ get_header(); ?>
                
     	    </div><!-- #primary -->
             
-            <?php get_sidebar(); ?>
+            <?php // get_sidebar(); ?>
 
         </div><!-- .row -->
         
