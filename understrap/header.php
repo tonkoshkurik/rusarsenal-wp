@@ -31,11 +31,12 @@
             <div class="container">
                 <div class="row">
                     <div class="logo col-md-3">
-                        <? if(is_front_page()){ ?>
+                        <?php if(is_front_page()){ ?>
                         <img src="<?php echo get_template_directory_uri(); ?>/src/img/logo.png" alt="Logo">
                         <?php } else { ?>
                         <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php echo get_template_directory_uri(); ?>/src/img/logo.png" alt="Logo"></a>
                         <?php } ?>
+                        <p class="logo-slogan">Пожарная безопасность предприятий</p>
                     </div>
                     <div class="col-md-9">
                         <div class="phone">

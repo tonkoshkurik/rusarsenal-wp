@@ -37,13 +37,15 @@ get_header(); ?>
 
                             <div class="col-sm-3 product">
                                 <div class="prod-box">
-                                <div class="vm-product-media-container">    
+                                <div class="vm-product-media-container">
+                                    <?php woocommerce_template_loop_product_link_open(); ?>
                                     <?php 
                                         if ( has_post_thumbnail( $loop->post->ID ) ) 
                                             echo get_the_post_thumbnail( $loop->post->ID, 'shop_catalog' ); 
                                         else 
                                             echo '<img src="' . woocommerce_placeholder_img_src() . '" alt="Placeholder" width="65px" height="115px" />'; 
                                     ?>
+                                    <?php echo '</a>'; ?>
                                 </div>
                                 <div class="vm-product-details-container">
                                 <h5 class="item_name product_title heading-style-5 visible-first"><?php the_title(); ?></h5>
