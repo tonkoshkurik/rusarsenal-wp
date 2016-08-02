@@ -12,7 +12,7 @@ get_header(); ?>
 
         <div class="row">
         
-            <div id="primary" class="<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>col-md-8<?php else : ?>col-md-12<?php endif; ?> content-area">
+            <div id="primary" class="col-md-12 content-area">
                 
                 <main id="main" class="site-main" role="main">
 
@@ -35,8 +35,7 @@ get_header(); ?>
                 
             </div><!-- #primary -->
         
-        <?php get_sidebar(); ?>
-
+<!-- -->
         </div><!-- .row -->
         
     </div><!-- Container end -->

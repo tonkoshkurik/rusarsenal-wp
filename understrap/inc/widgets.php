@@ -37,9 +37,9 @@ function understrap_widgets_init() {
     ) );
 
         register_sidebar( array(
-        'name'          => __( 'Footer Full', 'understrap' ),
-        'id'            => 'footerfull',
-        'description'   => 'Widget area below main content and above footer',
+        'name'          => 'Contakt form',
+        'id'            => 'contakt-form',
+        'description'   => 'Widget area below footer for Contakt form',
         'before_widget' => '',
         'after_widget'  => '',
         'before_title'  => '',

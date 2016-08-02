@@ -108,7 +108,21 @@
 </div>
 
 
+
 </div><!-- #page -->
+<script>
+ function showTheForm(){
+  document.querySelector('#habla_expanded_div').style.display = "block";
+ }
+</script>
+
+<div class="contakt-form" >
+<div id="habla_topbar_div"  onclick="showTheForm()"  class="habla_topbar_div_normal hbl_pal_title_fg hbl_pal_title_bg habla_topbar_div_compressed ">
+<a id="habla_oplink_a">Задайте Вопрос!</a></div>
+<div id="habla_expanded_div" >
+<?php dynamic_sidebar( 'contakt-form' ); ?>
+</div>
+</div>
 
 <?php wp_footer(); ?>
 
