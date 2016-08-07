@@ -72,10 +72,10 @@ function understrap_setup() {
 	) );
 
 	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'understrap_custom_background_args', array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-	) ) );
+	// add_theme_support( 'custom-background', apply_filters( 'understrap_custom_background_args', array(
+	// 	'default-color' => 'ffffff',
+	// 	'default-image' => '',
+	// ) ) );
 }
 endif; // understrap_setup
 add_action( 'after_setup_theme', 'understrap_setup' );
@@ -89,7 +89,7 @@ add_action( 'after_setup_theme', 'understrap_setup' );
 add_filter( 'excerpt_more', 'new_excerpt_more' );*/
 /* Removes the ... from the excerpt read more link */
 function custom_excerpt_more( $more ) {
-	return '';
+	return ' <p><a class="read-more btn btn-default" href="'. get_permalink( get_the_ID() ) . '">' . 'Читать' . '</a></p>';
 }
 add_filter( 'excerpt_more', 'custom_excerpt_more' );
 
@@ -97,6 +97,6 @@ add_filter( 'excerpt_more', 'custom_excerpt_more' );
 
 function all_excerpts_get_more_link($post_excerpt) {
 
-    return $post_excerpt . ' [...]<p><a class="btn btn-secondary understrap-read-more-link" href="'. get_permalink( get_the_ID() ) . '">' . __('Read More...', 'understrap')  . '</a></p>';
+    return $post_excerpt . ' [...]<p><a class="btn btn-secondary understrap-read-more-link" href="'. get_permalink( get_the_ID() ) . '">' . __('Читать', 'understrap')  . '</a></p>';
 }
 add_filter('wp_trim_excerpt', 'all_excerpts_get_more_link');

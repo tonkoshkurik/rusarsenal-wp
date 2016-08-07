@@ -1068,7 +1068,7 @@ msgstr "Доставка %s"
 #: includes/class-wc-checkout.php:454
 msgctxt "Billing FIELDNAME"
 msgid "Billing %s"
-msgstr "Платёж %s"
+msgstr "Поле %s"
 
 #: includes/class-wc-checkout.php:460
 msgctxt "FIELDNAME is a required field."

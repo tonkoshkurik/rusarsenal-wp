@@ -30,7 +30,7 @@
         <div id="top">
             <div class="container">
                 <div class="row">
-                    <div class="logo col-md-3">
+                    <div class="logo col-md-5">
                         <?php if(is_front_page()){ ?>
                         <img src="<?php echo get_template_directory_uri(); ?>/src/img/logo.png" alt="Logo">
                         <?php } else { ?>
@@ -38,7 +38,7 @@
                         <?php } ?>
                         <p class="logo-slogan">Пожарная безопасность предприятий</p>
                     </div>
-                    <div class="col-md-9">
+                    <div class="col-md-7">
                         <div class="phone">
                               <p><a href="tel:88123134326">8 (812) 313-43-26</a><br>
             <a href="tel:89013018630">8 (901) 301-86-30 </a><br>
@@ -53,7 +53,7 @@
                     </div>
                 </div>
             </div>
-            <nav class="navbar navbar-dark bg-inverse site-navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+            <nav class="navbar navbar-dark bg-inverse site-navigation" data-spy="affix" data-offset-top="150" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
                             
 
                 <div class="container">
